@@ -76,10 +76,11 @@
    - 새 폴더를 생성하는 명령어
    - 폴더 이름 사이에 공백 넣으려면 `"파일명"`형식으로 입력
 
-   ```bash```
+   ```bash
    mkdir folder
    
    mkdir "hello world"
+   ```
 
    
 
