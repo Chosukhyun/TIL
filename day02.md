@@ -30,10 +30,10 @@
 
 ```bash
 # git hub 유저명 입력
-git config --global user .name "Chosukhyun"`
+git config --global user .name "Chosukhyun"
 
 # git hub 이메일 입력
-git config --global user .email "asa950@naver.com"`
+git config --global user .email "asa950@naver.com"
 ```
 
 
@@ -124,7 +124,7 @@ git log --oneline
 
 
 
-__↓ Remote 원격저장소(깃헙 내의 repository)와 길 만들기__
+__↓ Remote 원격저장소(git hub 내의 repository)와 길 만들기__
 
 
 
@@ -192,9 +192,18 @@ git pull origin master
 
 ---
 
-## 6. `.gitignore` 생성하기
+## 6. `.gitignore` 
+
+`.gitignore` 
+
+- 특정 파일/폴더에 관하여 git이 관리하지 못하게 하는 것
+- 모든 파일의 버전관리를 하고 싶지 않을 때 사용 (개인정보, 보이고 싶지 않은 파일 들..)
 
 
+
+### `.gitignore`  생성하기
+
+1. 
 
 ## 
 
