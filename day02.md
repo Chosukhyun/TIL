@@ -203,7 +203,33 @@ git pull origin master
 
 ### `.gitignore`  생성하기
 
-1. 
+1. 폴더를 생성하고,  bash창에서 `git init`입력
+2. git의 __버전관리를 제외__하는 파일생성하기
+
+```bash
+# .gitignore파일 만들기
+touch .gitignore
+
+- vscode의 편집창에 git으로 관리하지 않을 "파일명"을 입력
+```
+
+- <u>__주의할 점__</u>
+
+  - <u>제외하고 싶은 파일이</u> 있으면 `git add`를 __입력하기 전__에 __`.gitignore`__파일에 입력해야 함
+
+  - __private한 파일__을 remote 저장소에 올렸을 경우,
+
+    ```bash
+    # remote저장소와 local저장소의 파일을 삭제
+    git rm 파일명
+    
+    # remote저장소에 있는 파일만 삭제
+    git rm cached 파일명
+    ```
+
+- __`참고 사이트`__  __[gitignore.io](https://www.toptal.com/developers/gitignore)__
+  - 사용자가 어떤 파일을 제외시켜야 하는지 알지 못하는 경우에 사용함
+  - __저장소에 추가되면 안되는 파일/폴더 목록__인 .gitignore를 <u>자동으로 생성</u>해주는 서비스
 
 ## 
 
@@ -213,7 +239,30 @@ git pull origin master
 
 ### 1) conflict 발생 원인
 
+`ex상황.`  commit을 push했을 때, __rejected__에러가 발생한 경우
+
+- 원인 : __원격저장소__에서 <u>commit을 수정한 경우</u>에 발생
+  - 원격저장소에서 수정한 것을 로컬저장소는 모름
+  - 로컬저장소에서 수정한commit을 push하면 [rejected] 발생
+
+
+
 ### 2) 해결 과정
+
+```bash
+# 1. 로컬저장소에서 commit을 가져오기
+git pull origin master
+ - current changes, incoming changes등 선택지 사이에서 선택가능
+ 
+# 2. 변경사항 저장 후, branch를 나타내는 부분에 "(master|MERGING)"표시로 문제가 해결되지 않았음을 알 수 있음
+
+# 3. git add ~ git push까지 commit을 원격저장소로 올리는 과정을 수행
+git add 파일명
+
+git commit -m "커밋의 이유"
+
+git push origin master
+```
 
 
 
