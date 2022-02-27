@@ -11,12 +11,18 @@
 
 
 
+
+
 ---
 
 ## 2. git hub에서 Repository 생성하기
 
 - __좌측 상단 문어 고양이 __ 클릭 후, `New`버튼 클릭
 - `Repository name`에 이름 만들고 설정 클릭 후, `Create Repository` 클릭하여 생성
+
+
+
+
 
 ---
 
@@ -65,6 +71,10 @@ git config --global --unset user .email
 
 
 
+---
+
+
+
 ### <상향식> git init ~ push 
 
 1. 일반폴더(TIL) 생성 후, TIL폴더 bash창에서 `git init` 입력
@@ -85,6 +95,8 @@ git init
 git status
  - 현재 파일상태는 untracked 상태 : 파일을 git이 관리하고 있지 않음
 ```
+
+
 
 
 
@@ -109,6 +121,8 @@ git status
 
 
 
+
+
 3. commit 기록
 
 - Staging Area로 올린 파일을 commit으로 저장소에 기록했다는 것을 의미
@@ -124,7 +138,11 @@ git log --oneline
 
 
 
+
+
 __↓ Remote 원격저장소(git hub 내의 repository)와 길 만들기__
+
+
 
 
 
@@ -140,12 +158,18 @@ git remote -v
 
 
 
+
+
 5. local 저장소의 변경사항을 remote 저장소로 밀어(push)올리기
 
 ```bash
 # commit을 remote저장소(git hub) 올리기
 git push origin master
 ```
+
+---
+
+
 
 
 
@@ -168,6 +192,8 @@ git clone [remote저장소 url]
 
 
 
+
+
 #### pull
 
 - remote저장소의 파일을 <u>__나의 local 저장소__</u>로 내려받기
@@ -180,17 +206,27 @@ git pull origin master
 
 
 
+
+
 #### __`정리`__
 
 - __분산버전관리__ → git hub은 협업을 위한 기본적인 툴
   - git hub(remote repository)을 기준으로 하여 local repository에서 push와 pull을 하며 같은 버전의 파일을 공유하는 것
   - 한 저장소에서 push와 pull 가능
 
+
+
+
+
 ---
 
 ## 5. README.md생성하여 git hub에 올리기
 
 ---
+
+
+
+
 
 ## 6. `.gitignore` 
 
@@ -213,6 +249,8 @@ touch .gitignore
 - vscode의 편집창에 git으로 관리하지 않을 "파일명"을 입력
 ```
 
+
+
 - <u>__주의할 점__</u>
 
   - <u>제외하고 싶은 파일이</u> 있으면 `git add`를 __입력하기 전__에 __`.gitignore`__파일에 입력해야 함
@@ -226,6 +264,8 @@ touch .gitignore
     # remote저장소에 있는 파일만 삭제
     git rm cached 파일명
     ```
+
+  
 
 - __`참고 사이트`__  __[gitignore.io](https://www.toptal.com/developers/gitignore)__
   - 사용자가 어떤 파일을 제외시켜야 하는지 알지 못하는 경우에 사용함
@@ -244,6 +284,8 @@ touch .gitignore
 - 원인 : __원격저장소__에서 <u>commit을 수정한 경우</u>에 발생
   - 원격저장소에서 수정한 것을 로컬저장소는 모름
   - 로컬저장소에서 수정한commit을 push하면 [rejected] 발생
+
+
 
 
 
