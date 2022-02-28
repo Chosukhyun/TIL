@@ -94,6 +94,9 @@ git init
 # 파일의 상태를 보여주는 명령어
 git status
  - 현재 파일상태는 untracked 상태 : 파일을 git이 관리하고 있지 않음
+ 
+# 연결되어 있는 저장소 경로 확인
+git remote -v
 ```
 
 
